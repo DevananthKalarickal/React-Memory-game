@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #202122, #dfd5dc); 
+}
+
+.scoreboard {
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    background: linear-gradient(135deg, #154ba8, #7d125b);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scoreboard h2 {
+    display: inline-block;
+    font-size: 24px;
+    color: #53a6ee;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.row {
+    border-radius: 10px;
+    padding: 20px;
+    background: linear-gradient(135deg, #3971d2, #a8247e);
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    background-color: #444;
+    border-radius: 10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card.matched {
+    background-color: green !important;
+    border: 2px solid darkgreen;
+    transition: background-color 0.3s;
+}
+
+@keyframes vibrate {
+    0% { transform: translate(1px, 0); }
+    25% { transform: translate(-1px, 0); }
+    50% { transform: translate(1px, 0); }
+    75% { transform: translate(-1px, 0); }
+    100% { transform: translate(0, 0); }
+}
+
+.vibrate {
+    animation: vibrate 0.2s linear;
+}
